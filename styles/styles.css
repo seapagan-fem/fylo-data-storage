@@ -1,0 +1,166 @@
+/* -------------------------------------------------------------------------- */
+/*                                 some resets                                */
+/* -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+/* ------------------------- set fonts and variables ------------------------ */
+:root {
+  ---grad-bar: hsl(6, 100%, 80%), hsl(335, 100%, 65%);
+
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+
+  font-family: "Raleway", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  background-image: url(../images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--pale-blue);
+  padding: 0 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+}
+
+header {
+  padding: 40px;
+  background-color: var(--dark-blue);
+  border-radius: 10px 100px 10px 10px;
+  margin-bottom: 16px;
+}
+
+.title {
+  margin-bottom: 33px;
+}
+
+.image-bar {
+  display: flex;
+  column-gap: 16px;
+}
+
+.image-bar div {
+  width: 4.8rem;
+  height: 4.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-dark-blue);
+  border-radius: 10px;
+}
+
+.graph {
+  position: relative;
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  padding: 32px;
+  padding-bottom: 52px;
+}
+
+h1 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+h1 strong {
+  font-weight: 700;
+}
+
+.bar {
+  height: 20px;
+  background-color: var(--very-dark-blue);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.inner-bar {
+  position: relative;
+  height: 14px;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 81.5%;
+  background: linear-gradient(90deg, var(---grad-bar));
+  border-radius: 8px;
+}
+
+.inner-bar::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  color: white;
+  background-color: white;
+  border-radius: 50%;
+  right: 2px;
+  top: 2px;
+}
+
+.legend {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.remaining {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -40px;
+  width: 180px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 22px 24px 10px 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 9px;
+}
+
+.count {
+  color: var(--very-dark-blue);
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+.units {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--grayish-blue);
+  font-weight: 700;
+}
+
+/* ---------------------------- style attribution --------------------------- */
+.attribution {
+  position: absolute;
+  bottom: 16px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
