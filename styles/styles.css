@@ -75,7 +75,7 @@ header {
   background-color: var(--dark-blue);
   border-radius: 10px;
   padding: 32px;
-  /* padding-bottom: 52px; */
+  padding-bottom: 52px;
 }
 
 h1 {
@@ -171,8 +171,10 @@ h1 strong {
 /* -------------------------------------------------------------------------- */
 @media screen and (min-width: 950px) {
   body {
-    /* background-image: url(../images/bg-desktop.png); */
-    /* background-image: none; */
+    background-color: hsla(229, 57%, 11%, 1);
+    background-image: url(../images/bg-desktop.png);
+    background-size: 100% 50vh;
+    background-position: bottom;
     margin: 0;
     padding: 0;
   }
@@ -195,10 +197,25 @@ h1 strong {
   }
 
   .remaining {
+    position: absolute;
     bottom: unset;
     transform: unset;
     left: unset;
     right: 32px;
     top: -54px;
+    border-bottom-right-radius: 0;
+  }
+
+  .remaining::after {
+    position: absolute;
+    content: "";
+    border-left: 22px solid transparent;
+    border-right: 22px solid white;
+    border-top: 22px solid white;
+    border-bottom: 22px solid transparent;
+    width: 0;
+    height: 0;
+    right: 0;
+    bottom: -24px;
   }
 }
