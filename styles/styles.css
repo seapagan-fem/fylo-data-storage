@@ -40,7 +40,8 @@ body {
 }
 
 main {
-  width: 100%;
+  /* width: 100%; */
+  max-width: 326px;
 }
 
 header {
@@ -74,7 +75,7 @@ header {
   background-color: var(--dark-blue);
   border-radius: 10px;
   padding: 32px;
-  padding-bottom: 52px;
+  /* padding-bottom: 52px; */
 }
 
 h1 {
@@ -163,4 +164,41 @@ h1 strong {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                media queries                               */
+/* -------------------------------------------------------------------------- */
+@media screen and (min-width: 950px) {
+  body {
+    /* background-image: url(../images/bg-desktop.png); */
+    /* background-image: none; */
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    max-width: unset;
+    display: flex;
+    column-gap: 30px;
+  }
+
+  header {
+    width: 350px;
+    margin-bottom: 0;
+  }
+
+  .graph {
+    width: 540px;
+    height: 154px;
+    align-self: flex-end;
+  }
+
+  .remaining {
+    bottom: unset;
+    transform: unset;
+    left: unset;
+    right: 32px;
+    top: -54px;
+  }
 }
