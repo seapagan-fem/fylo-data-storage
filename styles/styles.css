@@ -40,7 +40,6 @@ body {
 }
 
 main {
-  /* width: 100%; */
   max-width: 326px;
 }
 
@@ -169,7 +168,7 @@ h1 strong {
 /* -------------------------------------------------------------------------- */
 /*                                media queries                               */
 /* -------------------------------------------------------------------------- */
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 700px) {
   body {
     background-color: hsla(229, 57%, 11%, 1);
     background-image: url(../images/bg-desktop.png);
@@ -180,9 +179,10 @@ h1 strong {
   }
 
   main {
-    max-width: unset;
+    max-width: 100%;
     display: flex;
     column-gap: 30px;
+    padding: 0 24px;
   }
 
   header {
@@ -204,6 +204,7 @@ h1 strong {
     right: 32px;
     top: -54px;
     border-bottom-right-radius: 0;
+    padding: 16px 24px;
   }
 
   .remaining::after {
@@ -217,5 +218,6 @@ h1 strong {
     height: 0;
     right: 0;
     bottom: -24px;
+    box-shadow: 0px 75px 100px rgba(0, 0, 0, 0.24776);
   }
 }
